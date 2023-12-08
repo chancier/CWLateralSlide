@@ -1,3 +1,4 @@
+主要针对它无法设置底部偏移，故fork 在CWLateralSlideConfiguration添加属性bottomOffset
 # CWLateralSlide
 ![iOS7+](https://img.shields.io/badge/iOS-7%2B-orange.svg)
 [![Version](https://img.shields.io/cocoapods/v/CWLateralSlide.svg?style=flat)](https://cocoapods.org/pods/CWLateralSlide)
