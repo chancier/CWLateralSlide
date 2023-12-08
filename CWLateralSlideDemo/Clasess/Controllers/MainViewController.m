@@ -193,9 +193,11 @@
 - (void)maskAnimationFromLeft{
     
     LeftViewController *vc = [[LeftViewController alloc] init];
-
+    CWLateralSlideConfiguration *conf = [CWLateralSlideConfiguration defaultConfiguration];
+    conf.direction = CWDrawerTransitionFromLeft;
+    conf.bottomOffset = self.tabBarController.tabBar.frame.size.height;
     // 调用这个方法
-    [self cw_showDrawerViewController:vc animationType:CWDrawerAnimationTypeMask configuration:nil];
+    [self cw_showDrawerViewController:vc animationType:CWDrawerAnimationTypeMask configuration:conf];
 }
 
 // 遮盖在上从右侧划出

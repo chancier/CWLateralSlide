@@ -184,7 +184,7 @@
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     CWMaskView *maskView = [CWMaskView shareInstance];
-    maskView.frame = fromVC.view.bounds;
+    maskView.frame = CGRectMake(0, 0, fromVC.view.bounds.size.width, fromVC.view.bounds.size.height - self.configuration.bottomOffset);
     [fromVC.view addSubview:maskView];
     
     UIView *containerView = [transitionContext containerView];
@@ -196,7 +196,7 @@
         x = kCWSCREENWIDTH;
         ret = -1;
     }
-    toVC.view.frame = CGRectMake(x, 0, width, CGRectGetHeight(containerView.frame));
+    toVC.view.frame = CGRectMake(x, 0, width, CGRectGetHeight(containerView.frame)-self.configuration.bottomOffset);
     
     [containerView addSubview:fromVC.view];
     [containerView addSubview:toVC.view];

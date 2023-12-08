@@ -58,8 +58,10 @@ typedef NS_ENUM(NSUInteger,CWDrawerTransitionDirection) {
  动画切换过程中，最底层的背景图片
  */
 @property (nonatomic,strong) UIImage *backImage;
-
-
+/**
+ 底部偏移量设置
+ */
+@property (nonatomic,assign) float bottomOffset;
 
 /**
  默认配置
